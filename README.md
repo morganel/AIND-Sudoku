@@ -14,17 +14,22 @@ In `naked_twins()`, we considered that we were solving a regular sudoku problem 
 looked for twins in each row, column and square.
 Therefore, the grid obtained in the test case is the following.
 
-  1   237   4  | 2357  9   257 |  27   6    8  
-  9    5    6  |  27   1    8  |  27   3    4  
-  23  237   8  |  4    37   6  |  9    5    1  
----------------+---------------+---------------
-  5    1    79 | 237  347  279 |  34   8    6  
-  8    37   79 |  6   347  579 | 345   1    2  
-  6    4    23 | 1235  8   125 |  35   9    7  
----------------+---------------+---------------
-  7    8    1  |  9    2    3  |  6    4    5  
-  4    9    5  |  17   6    17 |  8    2    3  
-  23   6    23 |  8    5    4  |  1    7    9  
+|                 |                 |               |
+| --------------- |:---------------:| -------------:|
+|  1,   237,   4  | 2357,  9,   257 |  27,   6,    8|  
+|  9,    5,    6  |  27,   1,    8  |  27,   3,    4|  
+|  23,  237,   8  |  4,    37,   6  |  9 ,   5,    1|  
+|-----------------+-----------------+---------------|
+|  5,   1,    79  | 237,  347,  279 |  34,   8,    6|
+|  8,   37,   79  |  6,   347,  579 | 345,   1,    2| 
+|  6,   4,    23  | 1235,  8,   125 |  35,   9,    7|  
+|-----------------+-----------------+---------------|
+|  7,    8,    1  |  9,    2,    3  |  6,    4,    5|  
+|  4,    9,    5  |  17,   6,    17 |  8,    2,    3|  
+|  23,   6,    23 |  8,    5,    4  |  1,    7,    9|  
+
+
+
 
 If we were solving a diagonal sudoku problem, the naked twins method would have noticed that D4 and E5 are the only 2 cells
 that can contain 3 and 7 and would have reduced the search space accordingly.
