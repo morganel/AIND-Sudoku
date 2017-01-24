@@ -3,11 +3,37 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?
-A: *Student should provide answer here*
+
+A: If 2 digits can only appear in 2 boxes within the same unit, then they must appear in those 2 boxes since, 
+according to the rules of sudoku, all the digits have to appear in the unit. This means 2 things:
+- No other digit can appear in those 2 boxes.
+- The 2 digits cannot appear in the other boxes of the unit.
+Applying these constraints helps reducing the search space.
+
+In `naked_twins()`, we considered that we were solving a regular sudoku problem (not a diagonal sudoku) and
+looked for twins in each row, column and square.
+Therefore, the grid obtained in the test case is the following.
+
+  1   237   4  | 2357  9   257 |  27   6    8  
+  9    5    6  |  27   1    8  |  27   3    4  
+  23  237   8  |  4    37   6  |  9    5    1  
+---------------+---------------+---------------
+  5    1    79 | 237  347  279 |  34   8    6  
+  8    37   79 |  6   347  579 | 345   1    2  
+  6    4    23 | 1235  8   125 |  35   9    7  
+---------------+---------------+---------------
+  7    8    1  |  9    2    3  |  6    4    5  
+  4    9    5  |  17   6    17 |  8    2    3  
+  23   6    23 |  8    5    4  |  1    7    9  
+
+If we were solving a diagonal sudoku problem, the naked twins method would have noticed that D4 and E5 are the only 2 cells
+that can contain 3 and 7 and would have reduced the search space accordingly.
+
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?
-A: *Student should provide answer here*
+
+A: For the diagonal sudoku problem, we use the same constraint propagation method as for regular sudokus ("elimitate" and "only choice") but apply them to 2 extra units (the 2 diagonals), on top of rows, columns and squares. This reduces the search space more aggressively.
 
 ### Install
 
