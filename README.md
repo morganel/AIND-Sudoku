@@ -17,7 +17,7 @@ Therefore, the grid obtained in the test case is the following.
 ![sudoku image](sudokuimg.jpg)
 
 If we were solving a diagonal sudoku problem, the naked twins method would have noticed that D4 and E5 are the only 2 cells
-that can contain 3 and 7 and would have reduced the search space accordingly.
+that can contain 3 and 7 in the diagonal and would have reduced the search space accordingly.
 
 
 # Question 2 (Diagonal Sudoku)
